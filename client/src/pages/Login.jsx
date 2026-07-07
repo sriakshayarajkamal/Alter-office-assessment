@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {useNavigate,Link} from "react-route-dom";
+import {useNavigate,Link} from "react-router-dom";
 import api from "../api";
 
 function Login(){
@@ -19,9 +19,9 @@ function Login(){
         }catch(err){
             alert(err.response?.data?.message || "Login Failed");
         }
-    }
+    };
     return (
-        <div className = "containe">
+        <div className = "container">
             <h2>Login</h2>
             <form onSubmit = {handleLogin}>
                 <input type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
