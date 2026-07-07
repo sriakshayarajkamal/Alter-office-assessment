@@ -3,14 +3,24 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+
+
+const authRoutes = require("./routes/auth");
+const todoRoutes = require("./routes/todo");
+const listRoutes = require("./routes/list");
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
+
+app.use("/api/auth",authRoutes);
+app.use("api/todos",todoRoutes);
+app.use("api/list",listRoutes);
 
 app.get('/', (req, res) => {
   res.send('Server is running');
