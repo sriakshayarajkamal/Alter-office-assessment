@@ -1,9 +1,21 @@
+
+
+
+import {Routes, Route} from "react-route-dom";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import PublicList from "./pages/PublicList";
+
 function App() {
   return (
-    <div>
-      <h1>The Alter Office Assignment</h1>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
+      <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="/public/:shareId" element={<PublicList/>}/>
+    </Routes>
+  );
 }
-
 export default App
