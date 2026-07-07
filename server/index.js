@@ -19,8 +19,8 @@ mongoose.connect(process.env.MONGO_URL)
   .catch(err => console.log(err));
 
 app.use("/api/auth",authRoutes);
-app.use("api/todos",todoRoutes);
-app.use("api/list",listRoutes);
+app.use("/api/todos",todoRoutes);
+app.use("/api/lists",listRoutes);
 
 app.get('/', (req, res) => {
   res.send('Server is running');
