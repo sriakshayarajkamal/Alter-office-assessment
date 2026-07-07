@@ -39,3 +39,36 @@ p{
     text-align: center;
     margin-top:15px;
 }
+.dashboard{
+    width:80%;
+    margin:40px auto;
+}
+.dashboard h1{
+    margin-bottom:20px;
+}
+.add-lists{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+.add-list input{
+    flex:1;
+}
+.card{
+    background: white;
+    padding:15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    color:black;
+}
+.card button{
+    display:inline-block;
+    width:100px;
+    margin-top:10px;
+    background: red;
+    cursor:pointer;
+    color:white;
+    border:none;
+    padding:8px 14px;
+}

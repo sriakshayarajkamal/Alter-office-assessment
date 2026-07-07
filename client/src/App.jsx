@@ -4,17 +4,17 @@
 import {Routes, Route} from "react-router-dom";
 
 import Login from "./pages/Login";
-// import Register from "./pages/Register";
-// import Dashboard from "./pages/Dashboard";
-// import PublicList from "./pages/PublicList";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import PublicList from "./pages/PublicList";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Login/>}/>
-      {/* <Route path="/register" element={<Register/>}/>
+      <Route path="/register" element={<Register/>}/>
       <Route path="/dashboard" element={<Dashboard/>}/>
-      <Route path="/public/:shareId" element={<PublicList/>}/> */}
+      <Route path="/public/:shareId" element={<PublicList/>}/>
     </Routes>
   );
 }
