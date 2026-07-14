@@ -31,3 +31,6 @@ Create a `.env` file in the `server` folder:
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
 ```
+<img width="1682" height="720" alt="image" src="https://github.com/user-attachments/assets/9f3f9972-7968-4245-baf3-2c243941c307" />
+final output
+
