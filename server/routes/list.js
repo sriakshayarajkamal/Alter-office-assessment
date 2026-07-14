@@ -26,9 +26,18 @@ router.get("/", auth, async (req, res) => {
     }
 });
 
-// Delete list
-router.delete("/:id", auth, async (req, res) => {
+// Rename list
+router.put("/:id", auth, async (req, res) => {
     try {
+        const list = await TodoList.findByIdAndUpdate(req.params.id, { title: req.body.title }, { new: true });
+        res.json(list);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+// Delete list
+router.delete("/:id", auth, async (req, res) => {    try {
         await TodoList.findByIdAndDelete(req.params.id);
         res.json({ message: "Todo List Deleted" });
     } catch (err) {
